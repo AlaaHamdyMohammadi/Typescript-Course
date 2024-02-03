@@ -71,3 +71,22 @@ const p1 = new Peeps("A");
 const p2 = new Peeps("B");
 const p3 = new Peeps("C");
 
+// Getter and Setter
+class Bands {
+  constructor(private dataState: string[]) {}
+
+  public get data(): string[] {
+    return this.dataState;
+  }
+
+  public set data(value: string[]) {
+    if (Array.isArray(value) && value.every((el) => typeof el === "string")) {
+      this.dataState = value;
+      return;
+    }
+  }
+}
+
+const myBands = new Bands();
+myBands.data = ["A", "B", "C"];
+console.log(myBands.data);

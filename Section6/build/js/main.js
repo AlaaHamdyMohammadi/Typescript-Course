@@ -50,3 +50,21 @@ Peeps.count = 0;
 const p1 = new Peeps("A");
 const p2 = new Peeps("B");
 const p3 = new Peeps("C");
+// Getter and Setter
+class Bands {
+    constructor(dataState) {
+        this.dataState = dataState;
+    }
+    get data() {
+        return this.dataState;
+    }
+    set data(value) {
+        if (Array.isArray(value) && value.every((el) => typeof el === "string")) {
+            this.dataState = value;
+            return;
+        }
+    }
+}
+const myBands = new Bands();
+myBands.data = ["A", "B", "C"];
+console.log(myBands.data);
