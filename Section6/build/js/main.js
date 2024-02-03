@@ -24,8 +24,29 @@ class WebDev extends Coder {
         return `I write ${this.lang}`;
     }
 }
-const w = new WebDev('Laptop', 'Alaa', 25, 'TS');
+const w = new WebDev("Laptop", "Alaa", 25, "TS");
 console.log(w.getLang());
-// console.log(w.age);
-// console.log(w.lang);
-// Interface with class
+class Job {
+    constructor(name, instrument) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+    play(action) {
+        return `${this.name} is playing ${action} with ${this.instrument}`;
+    }
+}
+const p = new Job("Noha", "Guitar");
+console.log(p.play("drums"));
+class Peeps {
+    static getCount() {
+        return Peeps.count;
+    }
+    constructor(name) {
+        this.name = name;
+        this.id = ++Peeps.count;
+    }
+}
+Peeps.count = 0;
+const p1 = new Peeps("A");
+const p2 = new Peeps("B");
+const p3 = new Peeps("C");
