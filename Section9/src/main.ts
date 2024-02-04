@@ -34,3 +34,21 @@ const assignVerified: Readonly<Assignment> = {
 };
 
 assignVerified.grade = 100; // Error => just readonly
+
+// 3- Record <key, value>
+const hexColorMap: Record<string, string> = {
+  red: "FF0000",
+  green: "00FF00",
+  blue: "0000FF",
+};
+
+type Students = "Maha" | "Noha";
+
+interface Grades {
+  assign1: number;
+  assign2: number;
+}
+
+const gradesData: Record<Students, Grades> = {
+  "Maha": {assign1: 20, assign2: 50},
+};
