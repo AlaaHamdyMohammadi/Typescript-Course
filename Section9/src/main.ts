@@ -33,7 +33,7 @@ const assignVerified: Readonly<Assignment> = {
   verified: true,
 };
 
-assignVerified.grade = 100; // Error => just readonly
+//assignVerified.grade = 100; // Error => just readonly
 
 // 3- Record <key, value>
 const hexColorMap: Record<string, string> = {
@@ -50,6 +50,22 @@ interface Grades {
 }
 
 const gradesData: Record<Students, Grades> = {
-  "Maha": {assign1: 20, assign2: 50},
-  "Noha": {assign1: 30, assign2: 50},
+  Maha: { assign1: 20, assign2: 50 },
+  Noha: { assign1: 30, assign2: 50 },
 };
+
+// 4- Pick and Omit
+
+type AssignResult = Pick<Assignment, "studentId" | "grade">;
+
+const score: AssignResult = {
+  studentId: "abc123",
+  grade: 0,
+}
+
+type AssignPreview = Omit<Assignment, "grade" | "verified">
+
+const preview: AssignPreview = {
+  studentId: 'Ab',
+  title: 'Final Project',
+}
