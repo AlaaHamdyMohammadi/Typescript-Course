@@ -51,4 +51,5 @@ interface Grades {
 
 const gradesData: Record<Students, Grades> = {
   "Maha": {assign1: 20, assign2: 50},
+  "Noha": {assign1: 30, assign2: 50},
 };
