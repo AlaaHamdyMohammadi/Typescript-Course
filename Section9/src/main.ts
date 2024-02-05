@@ -19,7 +19,7 @@ const updateAssinment = (
 const assign1: Assignment = { studentId: "abc123", title: "Math", grade: 0 };
 console.log(updateAssinment(assign1, { title: "A" }));
 /*
-  2- Required and Readonly:
+  2- Required and Readonly:..
   Required:  All properties are required (verify property is optional but now is required)
   Readonly:  All properties are readonly
 */
