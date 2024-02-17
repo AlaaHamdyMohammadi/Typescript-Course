@@ -22,7 +22,7 @@ const initialState: ProductType[] = [
   },
 ];
 
-export type UseProductsContextType = {
-  products: ProductType[];
-};
+// export type UseProductsContextType = {
+//   products: ProductType[];
+// };
 
